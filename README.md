@@ -1,10 +1,9 @@
 ## Teste JAVA
-___
 
 Projeto foi desenvolvido usando a seguinte Stack
 
   - JAVA 17
-  - Spring Boot 
+  - Spring MVC 
   - Hibernate
   - JSP com Bootstrap
   - Postgres
@@ -18,7 +17,7 @@ Endpoint disponível para cadastrar pessoas novas:
   "nome": "Joca",
   "funcionario": "false",
   "gerente": "true"
-  }
+  }'
 ```
 
 ### OBSERVAÇÃO
