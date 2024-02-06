@@ -50,6 +50,11 @@
                 </td>
             </tr>
         </c:forEach>
+        <c:if test="${empty projetos}">
+            <tr>
+                <td colspan="100%" class="p-4 text-center">Ainda não existem projetos cadastrados.<br>Clique em 'Adicionar projeto' para iniciar.</td>
+            </tr>
+        </c:if>
     </table>
 
    <!-- Modal excluir -->

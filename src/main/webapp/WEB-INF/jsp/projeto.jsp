@@ -10,8 +10,8 @@
     <title>Gerenciador de portfólios - Novo projeto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
 
+<body>
     <div class="p-4">
         <form:form action="/projetos/salvar" method="POST" modelAttribute="projeto">
             <form:input type="hidden" path="id"/>
@@ -89,6 +89,9 @@
                         </label>
                     </div>
                 </c:forEach>
+                <c:if test="${empty funcionarios}">
+                <div class="mb-3 text-muted">Não existem funcionários cadstrados</div>
+                </c:if>
             </div>
             <div class="form-check">
 
