@@ -39,7 +39,7 @@
                     <form:input type="date" class="form-control" id="inicio" path="inicio" pattern="\d{1,2}/\d{1,2}/\d{4}" />
                 </div>
                 <div class="mb-3 col">
-                    <label for="previsao" class="form-label">Previsão término</label>
+                    <label for="previsao" class="form-label">Previsão de término</label>
                     <form:input type="date" class="form-control" id="previsao" path="previsao" pattern="\d{1,2}/\d{1,2}/\d{4}" />
                 </div>
                 <div class="mb-3 col">
@@ -50,10 +50,8 @@
             <div class="mb-3">
                 <label for="orcamento" class="form-label">Orçamento</label>
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">R$</span>
-                    </div>
-                    <form:input type="text" class="form-control" id="orcamento" path="orcamento" />
+                    <span class="input-group-text">R$</span>
+                    <form:input type="number" class="form-control" id="orcamento" path="orcamento" pattern="(\d{3})([\.])(\d{2})" />
                 </div>
             </div>
             <div class="row">
@@ -82,11 +80,11 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="funcionarios" class="form-label">Membros</label>
+                <label class="form-label">Membros</label>
                 <c:forEach items="${funcionarios}" var="funcionario">
                     <div class="form-check">
-                        <form:checkbox path="membros" class="form-check-input" value="${funcionario}" />
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <form:checkbox path="membros" class="form-check-input" id="${funcionario.id}" value="${funcionario}" />
+                        <label class="form-check-label" for="${funcionario.id}">
                             ${funcionario.nome}
                         </label>
                     </div>

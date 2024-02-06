@@ -1,6 +1,6 @@
 package com.spring.jsp.portfolio.model;
 
-public enum Risco {
+public enum StatusRisco {
 
     BAIXO_RISCO("Baixo"),
     MEDIO_RISCO("Médio"),
@@ -8,7 +8,7 @@ public enum Risco {
 
     private String descricao;
 
-    Risco(String descricao) {
+    StatusRisco(String descricao) {
         this.descricao = descricao;
     }
 

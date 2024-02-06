@@ -1,8 +1,7 @@
 package com.spring.jsp.portfolio.controllers;
 
-import com.spring.jsp.portfolio.model.Pessoa;
 import com.spring.jsp.portfolio.model.Projeto;
-import com.spring.jsp.portfolio.model.Risco;
+import com.spring.jsp.portfolio.model.StatusRisco;
 import com.spring.jsp.portfolio.model.StatusProjeto;
 import com.spring.jsp.portfolio.service.PessoaService;
 import com.spring.jsp.portfolio.service.ProjetoService;
@@ -47,7 +46,7 @@ public class ProjetoController {
         model.addAttribute("funcionarios", pessoaService.getByCargo(false, true));
 
         model.addAttribute("listaStatus", StatusProjeto.values());
-        model.addAttribute("listaRiscos", Risco.values());
+        model.addAttribute("listaRiscos", StatusRisco.values());
 
         return "projeto";
     }

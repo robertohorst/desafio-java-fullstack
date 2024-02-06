@@ -2,7 +2,6 @@ package com.spring.jsp.portfolio.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.NonNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -44,7 +43,7 @@ public class Projeto {
     private StatusProjeto status;
 
     @Enumerated(EnumType.STRING)
-    private Risco risco;
+    private StatusRisco risco;
 
     @ManyToMany
     @JoinTable(name = "membros",
